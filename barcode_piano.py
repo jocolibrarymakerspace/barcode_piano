@@ -34,7 +34,15 @@ playing = []
 played = []
 
 #We define a list to store the path to the sounds on your Raspberry Pi
-playlist = ['/01.wav/', '/02.wav/', '/03.wav/', '/04.wav/', '/05.wav/', '/06.wav/', '/07.wav/', '/08.wav/', '/09.wav/', '/10.wav/'] 
+playlist = ['/barcode_piano_key_01.wav/',
+            '/barcode_piano_key_02.wav/',
+            '/barcode_piano_key_03.wav/',
+            '/barcode_piano_key_04.wav/',
+            '/barcode_piano_key_05.wav/',
+            '/barcode_piano_key_06.wav/',
+            '/barcode_piano_key_07.wav/',
+            '/barcode_piano_key_08.wav/',
+            '/barcode_piano_key_09.wav/'] 
 
 while True:
 
