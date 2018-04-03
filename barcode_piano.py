@@ -34,15 +34,16 @@ playing = []
 played = []
 
 #We define a list to store the path to the sounds on your Raspberry Pi
-playlist = ['/barcode_piano_key_01.wav/',
-            '/barcode_piano_key_02.wav/',
-            '/barcode_piano_key_03.wav/',
-            '/barcode_piano_key_04.wav/',
-            '/barcode_piano_key_05.wav/',
-            '/barcode_piano_key_06.wav/',
-            '/barcode_piano_key_07.wav/',
-            '/barcode_piano_key_08.wav/',
-            '/barcode_piano_key_09.wav/'] 
+playlist = ['barcode_piano_key_01.wav',
+            'barcode_piano_key_02.wav',
+            'barcode_piano_key_03.wav',
+            'barcode_piano_key_04.wav',
+            'barcode_piano_key_05.wav',
+            'barcode_piano_key_06.wav',
+            'barcode_piano_key_07.wav',
+            'barcode_piano_key_08.wav',
+            'barcode_piano_key_09.wav',
+            'barcode_piano_key_10.wav'] 
 
 while True:
 
@@ -66,13 +67,13 @@ while True:
             playing = barcode.pop()
 
             #We print out the number in the playing variable...
-            print("Now playing" + str(playing))
+            print("Now playing note " + str(playing))
 
             #We setup VLC to play the file in the list corresponding with the number currently processed
             player = vlc.MediaPlayer(playlist[playing])
 
             #We catch a little break to let any previous sounds finish playing
-            time.sleep(0.35)
+            time.sleep(0.15)
 
             #We play the VLC track we loaded earlier...
             player.play()
@@ -82,3 +83,4 @@ while True:
 
         #Once the barcode list is empty, we let the user know - and start all over again!
         print("\nWe finished playing that barcode!")
+        time.sleep(1)
